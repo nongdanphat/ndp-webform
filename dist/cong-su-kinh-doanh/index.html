@@ -900,6 +900,7 @@
             class="muted"
             style="margin-bottom: 1rem"
           ></div>
+          <div id="callForActionLink" class="muted"></div>
         </div>
 
         <!-- COPYRIGHT -->
@@ -2482,6 +2483,7 @@
           const callForActionCard = $("callForActionCard");
           const callForActionTitle = $("callForActionTitle");
           const callForActionDescription = $("callForActionDescription");
+          const callForActionLink = $("callForActionLink");
 
           if (callForActionCard) {
             if (callForActionTitle) {
@@ -2492,6 +2494,13 @@
               callForActionDescription.textContent =
                 callForActionConfig.description ||
                 "Vui lòng liên hệ để được tư vấn và hỗ trợ tốt nhất.";
+            }
+            if (callForActionLink) {
+              if (callForActionConfig.link) {
+                callForActionLink.innerHTML = `<strong>Link:</strong><br><a href="${callForActionConfig.link}" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline; word-break: break-all;">${callForActionConfig.link}</a>`;
+              } else {
+                callForActionLink.innerHTML = "";
+              }
             }
             callForActionCard.style.display = "block";
           }
