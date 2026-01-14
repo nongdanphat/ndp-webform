@@ -2453,8 +2453,16 @@
                 "Vui lòng tham gia nhóm Zalo để nhận được hỗ trợ tốt nhất.";
             }
             if (zaloLink) {
-              if (data.zalo_link) {
-                zaloLink.innerHTML = `<strong>Link:</strong> <a href="${data.zalo_link}" target="_blank" rel="noopener noreferrer">${data.zalo_link}</a>`;
+              // Ưu tiên dùng link từ config, nếu không có thì dùng từ data
+              let linkUrl = null;
+              if (zaloConfig.link) {
+                linkUrl = zaloConfig.link;
+              } else if (data.zalo_link) {
+                linkUrl = data.zalo_link;
+              }
+
+              if (linkUrl) {
+                zaloLink.innerHTML = `<strong>Link:</strong><br><a href="${linkUrl}" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline; word-break: break-all;">${linkUrl}</a>`;
               } else {
                 zaloLink.innerHTML = "";
               }

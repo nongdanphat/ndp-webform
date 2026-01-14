@@ -11,8 +11,9 @@
     "showDeviceInfo": true,
     "zalo": {
       "enabled": true,
-      "title": "Tham gia nhóm Zalo hỗ trợ nông dân",
-      "description": "Nhận thông báo mới, hướng dẫn kỹ thuật và trao đổi trực tiếp với cán bộ hỗ trợ tại: https://zalo.me/g/ndp_support"
+      "title": "Tham gia nhóm Zalo",
+      "description": "Trao đổi trực tiếp với cán bộ hỗ trợ tại:",
+      "link": "https://zalo.me/g/zox0u8849l"
     },
     "callForAction": {
       "enabled": false,
