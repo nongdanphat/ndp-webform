@@ -3,7 +3,7 @@
   "enabled": true,
   
   "config": {
-    "scriptUrl": "https://script.google.com/macros/s/AKfycbx0wmilr2-PAitOqQcyp6QU8kISpE0s6uE46l_0B0Uim5Yk7Qs_41OS-kxMxQRskIXy/exec",
+    "scriptUrl": "https://script.google.com/macros/s/AKfycbzwru-Tp-B_fVp1gwj8qvTxfYjv6aXuIumlWT-mduoQHDE4dMmv2-yKzdB5L3G0NFxf/exec",
     "adminDataUrl": "../shared/administrative-unit-data.json",
     "zaloLinksUrl": "../shared/unit_zalo_group.csv",
     "allowMultipleSubmissions": true,
@@ -15,7 +15,7 @@
       "description": "Nhận thông báo mới, hướng dẫn kỹ thuật và trao đổi trực tiếp với cán bộ hỗ trợ."
     },
     "callForAction": {
-      "enabled": true,
+      "enabled": false,
       "title": "Nhiều chương trình hỗ trợ khác đang được chuẩn bị",
       "description": "Trong thời gian tới, Nông Dân Phát sẽ triển khai thêm nhiều chiến dịch và chương trình hỗ trợ nông dân trên nhiều lĩnh vực khác nhau như ứng dụng công nghệ, canh tác bền vững, đào tạo kỹ thuật và kết nối tiêu thụ sản phẩm."
     }
@@ -24,10 +24,10 @@
   "metadata": {
     "pageTitle": "NDP-Nông Dân Phát",
     "heroTitle": "Đăng ký tham gia chương trình ứng dụng công nghệ nông nghiệp",
-    "description": "Vui lòng cung cấp thông tin chính xác để chúng tôi tư vấn, kết nối và hỗ trợ bạn tiếp cận các giải pháp công nghệ phù hợp với mô hình sản xuất hiện tại.",
+    "description": "",
     "image": "./assets/logo.png",
     "background": "./assets/background.png",
-    "submitButtonText": "Gửi thông tin",
+    "submitButtonText": "Gửi",
     "newSubmitButtonText": "Gửi thông tin khác",
     "disabledMessage": "Chiến dịch này hiện đang tắt.",
     "copyright": "© 2026 Nông Dân Phát. Mọi quyền được bảo lưu.",
@@ -41,7 +41,7 @@
     "backgroundColor": "#f3f4f6",
     "warningColor": "#ED3241",
     "cardBorderRadius": "20px",
-    "backgroundHeight": "20rem",
+    "backgroundHeight": "30rem",
     "heroBorderRadius": "20px"
   },
   
@@ -98,47 +98,22 @@
     },
     "custom": [
       {
-        "title": "Thông tin mô hình & nhu cầu hỗ trợ",
+        "title": " ",
         "fields": [
           {
-            "id": "example_input_field",
-            "label": "Mô hình sản xuất hiện tại",
+            "id": "example_input_field_email",
+            "label": "Email",
             "type": "text",
-            "placeholder": "VD: Trồng rau, chăn nuôi gia cầm, cây ăn trái…",
-            "required": false
-          },
+            "placeholder": "Câu trả lời của bạn",
+            "required": true
+          }
+        ]
+      },
+      {
+        "title": " ",
+        "fields": [
           {
-            "id": "example_number_field",
-            "label": "Diện tích (m2)",
-            "type": "number",
-            "placeholder": "VD: 3000",
-            "required": false
-          },
-          {
-            "id": "example_checkbox",
-            "label": "Lĩnh vực quan tâm",
-            "type": "checkbox",
-            "required": true,
-            "options": [
-              "Ứng dụng IoT / cảm biến",
-              "Quản lý mùa vụ & sản lượng",
-              "Tưới tiêu – tiết kiệm nước",
-              "Truy xuất nguồn gốc"
-            ]
-          },
-          {
-            "id": "example_select",
-            "label": "Mức độ sẵn sàng áp dụng công nghệ",
-            "type": "select",
-            "required": true,
-            "options": [
-              "Chưa áp dụng",
-              "Đang tìm hiểu",
-              "Đã áp dụng một phần"
-            ]
-          },
-          {
-            "id": "example_radio",
+            "id": "example_radio_gender",
             "label": "Giới tính",
             "type": "radio",
             "required": true,
@@ -147,14 +122,38 @@
               "Nữ",
               "Khác"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "title": " ",
+        "fields": [
           {
-            "id": "example_textarea",
-            "label": "Nhu cầu cụ thể hoặc khó khăn đang gặp phải",
-            "type": "textarea",
-            "placeholder": "VD: Thiếu nhân công, chi phí cao, khó quản lý…",
-            "rows": 4,
-            "required": false
+            "id": "example_checkbox",
+            "label": "Địa điểm có thể làm việc",
+            "type": "checkbox",
+            "required": true,
+            "options": [
+              "TP.HCM",
+              "Bình Thuận",
+              "Tây Nguyên",
+              "Miền Tây"
+            ]
+          }
+        ]
+      },
+      {
+        "title": " ",
+        "fields": [
+          {
+            "id": "example_radio_agree",
+            "label": "Tôi đồng ý cho Nông Dân Phát thu thập và sử dụng thông tin tôi cung cấp để liên hệ tư vấn và cung cấp thông tin liên quan",
+            "type": "radio",
+            "required": true,
+            "options": [
+              "Xác nhận",
+              "Không"
+            ]
           }
         ]
       }

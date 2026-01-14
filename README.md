@@ -3,6 +3,11 @@
 Trang web tĩnh thu thập thông tin chiến dịch.  
 Triển khai: **Cloudflare Pages** + **Google Apps Script**.
 
+### Xem dữ liệu đã submit
+
+Tất cả dữ liệu đã submit được lưu tại Google Sheet:
+📊 [Xem dữ liệu đã submit](https://docs.google.com/spreadsheets/d/1WOY4N2H3_WWjxIo7q4FNviUh6FXpbP7AbV2M26xC98M/edit?hl=vi&gid=0#gid=0)
+
 ## 📁 Cấu trúc dự án
 
 ```
@@ -63,11 +68,6 @@ Copy file `gas/Code.gs` vào Google Apps Script project mới và cấu hình:
 - Cập nhật `SPREADSHEET_ID` trong `Code.gs`
 - Cập nhật `COLUMN_ORDER` nếu có custom fields
 - Deploy và lấy URL để cập nhật vào `campaign.json` → `config.scriptUrl`
-
-### 5. Xem dữ liệu đã submit
-
-Tất cả dữ liệu đã submit được lưu tại Google Sheet:
-📊 [Xem dữ liệu đã submit](https://docs.google.com/spreadsheets/d/1bMZkWsOg2FkNzO0ZG3TBx4W2hn9kVtBAy487WtcwKlc/edit?gid=261087324#gid=261087324)
 
 ## ⚠️ CẢNH BÁO QUAN TRỌNG
 

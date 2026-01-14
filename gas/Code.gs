@@ -29,12 +29,10 @@ const COLUMN_ORDER = [
   // ⚠️ BẮT BUỘC: Tất cả custom fields trong campaign.json phải được khai báo ở đây
   // Thứ tự trong array = thứ tự cột trong Sheet
   // Ví dụ:
-  "example_input_field",
-  "example_number_field",
+  "example_input_field_email",
+  "example_radio_gender",
   "example_checkbox",
-  "example_select",
-  "example_radio",
-  "example_textarea",
+  "example_radio_agree",
 ];
 
 function json_(obj) {
