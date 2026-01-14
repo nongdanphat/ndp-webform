@@ -12,7 +12,7 @@
     "zalo": {
       "enabled": true,
       "title": "Tham gia nhóm Zalo hỗ trợ nông dân",
-      "description": "Nhận thông báo mới, hướng dẫn kỹ thuật và trao đổi trực tiếp với cán bộ hỗ trợ."
+      "description": "Nhận thông báo mới, hướng dẫn kỹ thuật và trao đổi trực tiếp với cán bộ hỗ trợ tại: https://zalo.me/g/ndp_support"
     },
     "callForAction": {
       "enabled": false,
