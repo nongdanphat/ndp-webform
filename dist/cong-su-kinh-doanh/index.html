@@ -143,9 +143,6 @@
         padding: 1rem 1rem 3rem;
       }
       .hero {
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-        background-position: center;
         border-radius: 20px; /* Default, sẽ được override bởi config */
         padding: 0;
         margin: 1rem 0;
@@ -153,8 +150,12 @@
         position: relative;
         overflow: hidden;
         width: 100%;
-        height: 0;
-        padding-bottom: 30%; /* Tỷ lệ khung hình, có thể điều chỉnh */
+      }
+      .hero-banner {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
       }
       .hero::before {
         display: none;
@@ -162,7 +163,7 @@
       .hero-content {
         display: none;
       }
-      .hero img {
+      .hero-content img {
         width: 3rem;
         height: 3rem;
         border-radius: 14px;
@@ -601,7 +602,7 @@
         }
       }
       @media (max-width: 640px) {
-        .hero img {
+        .hero-content img {
           display: block;
           width: 5rem;
           height: 5rem;
@@ -738,6 +739,7 @@
 
       <div id="campaignContent" style="display: none">
         <div class="hero" id="campaignHero">
+          <img id="campaignBanner" src="" alt="Banner" class="hero-banner" />
           <div class="hero-content">
             <img id="campaignImage" src="" alt="Chiến dịch" />
             <div class="hero-text">
@@ -2779,6 +2781,7 @@
             const titleEl = $("campaignTitle");
             const descEl = $("campaignDesc");
             const imgEl = $("campaignImage");
+            const bannerEl = $("campaignBanner");
 
             if (titleEl && CAMPAIGN_CONFIG.metadata.heroTitle) {
               titleEl.textContent = CAMPAIGN_CONFIG.metadata.heroTitle;
@@ -2791,20 +2794,14 @@
               imgEl.alt = CAMPAIGN_CONFIG.metadata.title || "Chiến dịch";
             }
 
-            // Set background image and styles
-            if (heroEl && CAMPAIGN_CONFIG.metadata.background) {
-              heroEl.style.backgroundImage = `url(${CAMPAIGN_CONFIG.metadata.background})`;
-              // Set height from theme config if provided
-              if (CAMPAIGN_CONFIG.theme?.backgroundHeight) {
-                heroEl.style.height = CAMPAIGN_CONFIG.theme.backgroundHeight;
-              }
-              // Set border radius from theme config if provided
-              if (CAMPAIGN_CONFIG.theme?.heroBorderRadius) {
-                heroEl.style.borderRadius =
-                  CAMPAIGN_CONFIG.theme.heroBorderRadius;
-              }
-            } else if (heroEl && CAMPAIGN_CONFIG.theme?.heroBorderRadius) {
-              // Apply border radius even if no background image
+            // Set banner image
+            if (bannerEl && CAMPAIGN_CONFIG.metadata.background) {
+              bannerEl.src = CAMPAIGN_CONFIG.metadata.background;
+              bannerEl.alt = CAMPAIGN_CONFIG.metadata.heroTitle || "Banner";
+            }
+
+            // Set border radius from theme config if provided
+            if (heroEl && CAMPAIGN_CONFIG.theme?.heroBorderRadius) {
               heroEl.style.borderRadius =
                 CAMPAIGN_CONFIG.theme.heroBorderRadius;
             }

@@ -43,7 +43,6 @@
     "backgroundColor": "#f3f4f6",
     "warningColor": "#ED3241",
     "cardBorderRadius": "20px",
-    "backgroundHeight": "30rem",
     "heroBorderRadius": "20px"
   },
   
